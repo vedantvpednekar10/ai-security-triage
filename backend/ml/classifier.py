@@ -150,10 +150,10 @@ class AlertClassifier:
 
         print(f"Training Random Forest on {len(X_train)} samples...")
         self.model = RandomForestClassifier(
-            n_estimators=200,
-            max_depth=20,
-            min_samples_split=5,
-            min_samples_leaf=2,
+            n_estimators=100,
+            max_depth=12,
+            min_samples_split=10,
+            min_samples_leaf=4,
             n_jobs=-1,
             random_state=42,
             class_weight="balanced",

@@ -6,8 +6,8 @@ venv/
 .env
 
 # ML models and data
-backend/trained_models/
-backend/vectorstore/
+# backend/trained_models/
+# backend/vectorstore/
 backend/data/UNSW_NB15_*.csv
 backend/data/enterprise-attack.json
 
