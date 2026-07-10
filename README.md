@@ -6,7 +6,7 @@ An AI-powered SOC analyst workbench: ML classifies and clusters security alerts,
 
 ## Demo
 
-<!-- Paste the video embed link GitHub gives you after dragging demo.mp4 into the README editor -->
+[Watch the demo](./Demo.mp4)
 
 ## Architecture
 
