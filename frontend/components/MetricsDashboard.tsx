@@ -13,6 +13,27 @@ const SEVERITY_COLORS: Record<string, string> = {
   info: "#64748b",
 };
 
+function SeverityTooltip({ active, payload }: any) {
+  if (!active || !payload || !payload.length) return null;
+  const { name, count, fill } = payload[0].payload;
+  return (
+    <div
+      style={{
+        background: fill,
+        border: "1px solid rgba(255,255,255,0.2)",
+        borderRadius: 8,
+        padding: "6px 10px",
+        fontSize: 12,
+        color: "#0a0a0f",
+        fontWeight: 600,
+        textTransform: "capitalize",
+      }}
+    >
+      {name}: {count}
+    </div>
+  );
+}
+
 function StatCard({ label, value, icon: Icon, color }: {
   label: string; value: string | number; icon: any; color: string;
 }) {
@@ -94,7 +115,7 @@ export default function MetricsDashboard({ metrics }: { metrics: DashboardMetric
                       <Cell key={i} fill={entry.fill} />
                     ))}
                   </Pie>
-                  <Tooltip contentStyle={{ background: "#1a1a24", border: "1px solid #2a2a36", borderRadius: 8, fontSize: 12 }} />
+                  <Tooltip content={<SeverityTooltip />} />
                 </PieChart>
               </ResponsiveContainer>
               <div className="space-y-2">
