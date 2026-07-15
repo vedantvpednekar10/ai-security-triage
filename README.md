@@ -192,14 +192,6 @@ Not claiming production-grade accuracy here — this reflects real, honest numbe
 - The original `next@15.0.0` dependency shipped with a critical RCE vulnerability (CVE-2025-66478); this project has been upgraded to a patched Next.js version.
 - API keys are loaded from `.env` (gitignored) and never committed.
 
-## Resume Bullet Points
-
-- Built an AI-powered SOC alert triage platform: ML-based alert classification (Random Forest on UNSW-NB15, 175K records) and anomaly detection (Isolation Forest), with automated case generation via DBSCAN clustering
-- Developed a RAG-based investigation assistant (LangChain + FAISS + Gemini) grounded in the MITRE ATT&CK framework, enabling analysts to query threat intelligence in natural language with technique-cited responses
-- Identified and corrected classifier overfitting (82% train vs. 68% test accuracy) by constraining model complexity, cutting model size by 93% (259MB → 19MB) while improving recall on critical/rare attack categories
-- Found and patched a critical (CVSS 10.0) remote code execution vulnerability (CVE-2025-66478) in the frontend's Next.js dependency before deployment
-- Designed a full-stack SOC analyst dashboard (Next.js, FastAPI) with real-time alert queue, case management, and MITRE ATT&CK technique mapping
-
 ## License
 
 MIT
